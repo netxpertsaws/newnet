@@ -11,15 +11,7 @@ resource "aws_instance" "Web" {
       "touch hello.txt",
       "echo helloworld remote provisioner >> hello.txt",
     ]
-  }
-  connection {
-      type        = "ssh"
-      host        = self.public_ip
-      user        = "ubuntu"
-      private_key = file("/home/ubuntu/.ssh/id_rsa")
-      timeout     = "4m"
-   }
-
+  }  
 }
 
 resource "aws_security_group" "main" {
