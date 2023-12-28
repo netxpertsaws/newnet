@@ -5,13 +5,7 @@ resource "aws_instance" "Web" {
   availability_zone = "us-east-1a"
   key_name          = "TerraFormNewKey" 
   vpc_security_group_ids = [aws_security_group.main.id]
-
- provisioner "remote-exec" {
-    inline = [
-      "touch hello.txt",
-      "echo helloworld remote provisioner >> hello.txt",
-    ]
-  }  
+ 
 }
 
 resource "aws_security_group" "main" {
