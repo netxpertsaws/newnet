@@ -5,6 +5,9 @@ resource "aws_instance" "Web" {
   availability_zone = "us-east-1a"
   key_name          = "TerraFormNewKey" 
   vpc_security_group_ids = [aws_security_group.main.id]
+  tags = {
+    Name = "Java-Web-EC2"
+  }
  
 }
 
