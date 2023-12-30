@@ -1,14 +1,10 @@
 resource "aws_instance" "Web" {
-  count             = "2"
+  count             = "1"
   ami               = "ami-0230bd60aa48260c6"
   instance_type     = "t2.micro"
   availability_zone = "us-east-1a"
   key_name          = "TerraFormNewKey" 
-  vpc_security_group_ids = [aws_security_group.main.id]
-  tags = {
-    Name = "Java-Web-EC2"
-  }
- 
+  vpc_security_group_ids = [aws_security_group.main.id]  
 }
 
 resource "aws_security_group" "main" {
