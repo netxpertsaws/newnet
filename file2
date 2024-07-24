@@ -24,3 +24,4 @@ switch(expression) {
     // code block
 }
 one
+Two
