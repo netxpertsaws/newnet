@@ -8,3 +8,8 @@ if (condition) {
 int x = 10;
 int y = 9;
 System.out.println(x > y); // returns true, because 10 is higher than 9
+int x = 20;
+int y = 18;
+if (x > y) {
+  System.out.println("x is greater than y");
+}
