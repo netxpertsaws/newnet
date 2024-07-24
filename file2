@@ -13,3 +13,13 @@ int y = 18;
 if (x > y) {
   System.out.println("x is greater than y");
 }
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
