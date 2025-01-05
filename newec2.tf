@@ -1,9 +1,9 @@
 resource "aws_instance" "Web" {
   count             = "1"
-  ami               = "ami-0230bd60aa48260c6"
+  ami               = "ami-0fd05997b4dff7aac"
   instance_type     = "t2.micro"
-  availability_zone = "us-east-1a"
-  key_name          = "TerraFormNewKey"   
+  availability_zone = "ap-south-1a"
+  key_name          = "tk"   
   vpc_security_group_ids = [aws_security_group.main.id]   
 }
 
