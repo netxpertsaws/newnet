@@ -17,22 +17,6 @@ data "aws_ami" "ubuntu" {
     values = ["ebs"]
   }
 }
-
-
-resource "aws_instance" "web" {
-  for_each      = toset(["Todd", "James", "Alice", "Dottie"])  
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = each.key
-  }
-}
-
-output "outputami_id" {
-  value = data.aws_ami.ubuntu.id
-}
-
 resource "aws_iam_user" "the-accounts" {
   for_each = toset(["Todd", "James", "Alice", "Dottie"])
   name     = each.key
