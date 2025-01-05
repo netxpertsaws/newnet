@@ -1,8 +1,8 @@
 resource "aws_instance" "Web" {
   count             = "1"
   ami               = "ami-0fd05997b4dff7aac"
-  instance_type     = "t2.micro"
-  availability_zone = "ap-south-1a"
+  instance_type     = "t2.medium"
+  availability_zone = "ap-south-1b"
   key_name          = "tk"   
   vpc_security_group_ids = [aws_security_group.main.id]   
 }
